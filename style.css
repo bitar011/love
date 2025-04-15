@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ffe0ec, #ffeef7);
+    color: #444;
+    position: relative;
+    overflow-x: hidden;
+  }
+  header {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #e91e63;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .timeline-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .letter {
+    background: #fff0f5;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #999;
+  }
+  button.secret {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background 0.3s;
+  }
+  button.secret:hover {
+    background: #c2185b;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Corações */
+  .hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: float 10s linear infinite;
+  }
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+  }
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
